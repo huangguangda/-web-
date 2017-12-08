@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图书分类</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.css" >
+<script src="/mbook/public/static/JQM/jquery-1.11.1.min.js"></script>
+<script src="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page">
+  <!-- 页眉 -->
+  <div data-role="header" >
+    <a data-ajax="false" href="../index/index" data-role="button" data-icon="home">首页</a>
+    <h1>图书列表</h1>
+  </div>
+  <!-- 内容 -->
+  <div data-role="content">
+  <form name="login" method="post" action="logindo" data-ajax="false">  
+    <center>
+      <div data-role="fieldcontain">
+        <label for="username"> 用户名: </label>
+        <input name="username" id="username"  value="" type="text" required>
+      </div>
+
+      <div data-role="fieldcontain">
+        <label for="password"> 密码: </label>
+        <input name="password" id="password" placeholder="" value="" type="password" required>
+      </div>    
+
+      <input data-inline="true" type="submit" name="submit" value="登录"  />
+      <a data-inline="true" href="#"> 忘记密码 </a> 
+    </center>
+  </form>    
+
+  </div>
+  <!-- 页脚 -->
+  <div data-role="footer" data-theme="b">
+    <h1>机电书店</h1>
+  </div>
+</div>
+</body>
+</html>

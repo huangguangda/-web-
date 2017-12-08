@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+  #content{
+    background-color: Azure;
+  }
+</style>
+<title>图书分类</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.css" >
+<script src="/mbook/public/static/JQM/jquery-1.11.1.min.js"></script>
+<script src="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+  .pagination{text-align:center;margin-top:20px;margin-bottom: 20px;}  
+.pagination li{margin:0px 10px; border:1px solid #e6e6e6;padding: 3px 8px;display: inline-block;}  
+.pagination .active{background-color: #dd1a20;color: #fff;}  
+.pagination .disabled{color:#aaa;}
+</style>
+<div data-role="page">
+  <!-- 页眉 -->
+  <div data-role="header" >
+    <a data-ajax="false" href="../index/index" data-role="button" data-icon="home">首页</a>
+    <h1>公告通知</h1>
+  </div>
+  <!-- 内容 -->
+  <div data-role="content" id="content"> 
+    <div class="colbox pageleftbox newsdefailbox">
+        <h2 class="newstitle" title="艾欧尼亚大区临时维护公告">艾欧尼亚大区临时维护公告</h2>
+        <div class="borline clearfix">
+          <p class="artinfo"><span class="author">英雄联盟运营团队</span>&#12288;时间：2017-12-01 13:06:16&#12288;</p>
+          <!-- <p class="share">分享到：</p> -->
+        </div>
+        
+        <div id="article" class="article"><p>　　尊敬的召唤师：</p>
+<p>　　由于服务器异常，我们将临时对艾欧尼亚大区进行停机维护，维护时长预计3小时左右。您正在进行的对局会临时中止，对局结果不会记录在您的游戏数据中。</p>
+<p>　　由于服务器维护给您带来的不便，我们深感歉意，感谢您对《英雄联盟》的支持!</p></div>
+        <ul style="display:none"></ul>
+        <div id="wb" class="mwb"></div>
+        <div id="CommentOn" class="commenton" style="display:none"></div>
+      </div>
+  </div>
+  <!-- 页脚 -->
+  <div data-role="footer" data-theme="b">
+    <h1>机电书店</h1>
+  </div>
+</div>
+</body>
+</html>

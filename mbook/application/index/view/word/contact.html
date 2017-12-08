@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+  #content{
+    background-color: Azure;
+  }
+</style>
+<title>图书分类</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.css" >
+<script src="/mbook/public/static/JQM/jquery-1.11.1.min.js"></script>
+<script src="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+  .pagination{text-align:center;margin-top:20px;margin-bottom: 20px;}  
+.pagination li{margin:0px 10px; border:1px solid #e6e6e6;padding: 3px 8px;display: inline-block;}  
+.pagination .active{background-color: #dd1a20;color: #fff;}  
+.pagination .disabled{color:#aaa;}
+</style>
+<div data-role="page">
+  <!-- 页眉 -->
+  <div data-role="header" >
+    <a data-ajax="false" href="../index/index" data-role="button" data-icon="home">首页</a>
+    <h1>联系我们</h1>
+  </div>
+  <!-- 内容 -->
+  <div data-role="content" id="content"> 
+    <img  src="/mbook/public/static/images/timg.jpg" alt="sdgg" />
+              <div>
+                <p style="font-weight: bold">Lenovo产品售前咨询</p>
+                <p>服务热线： <span style="color: #666">400-100-8002</span></p>
+                <p style="margin-left: 63px"><span style="color: #666">800-810-8888</span></p>
+                <p>服务时间： 周一到周日 9:00-18:00</p>
+              </div>
+              <div style="margin-top: 20px;">
+                <p style="font-weight: bold">ThinkPad产品售前咨询</p>
+                <p>服务热线： <span style="color: #666">800-898-9006</span></p>
+                <p style="margin-left: 63px"><span style="color: #666">400-898-9006</span></p>
+                <p>服务时间： 周一至周日 8:30—17:30</p>
+              </div>
+              <div style="margin-top: 20px;">
+                <p style="font-weight: bold">扬天产品售前咨询</p>
+                <p>服务热线： <span style="color: #666">400-990-9090</span></p>
+                <p style="margin-left: 63px"><span style="color: #666">800-990-9090</span></p>
+                <p>服务时间： 周一至周五 9:00—18:00</p>
+              </div>
+            </div>
+  <!-- 页脚 -->
+  <div data-role="footer" data-theme="b">
+    <h1>机电书店</h1>
+  </div>
+</div>
+</body>
+</html>

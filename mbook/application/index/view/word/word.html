@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+  #content{
+    background-color: Azure;
+  }
+</style>
+<title>图书分类</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.css" >
+<script src="/mbook/public/static/JQM/jquery-1.11.1.min.js"></script>
+<script src="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+  .pagination{text-align:center;margin-top:20px;margin-bottom: 20px;}  
+.pagination li{margin:0px 10px; border:1px solid #e6e6e6;padding: 3px 8px;display: inline-block;}  
+.pagination .active{background-color: #dd1a20;color: #fff;}  
+.pagination .disabled{color:#aaa;}
+</style>
+<div data-role="page">
+  <!-- 页眉 -->
+  <div data-role="header" >
+    <a data-ajax="false" href="../index/index" data-role="button" data-icon="home">首页</a>
+    <h1>意见反馈</h1>
+  </div>
+  <!-- 内容 -->
+  <div data-role="content" id="content"> 
+  <h1>用户反馈留言</h1>
+  <div>
+  {volist name="word" id="vo"}
+  <img style="height: 100px;" src="/mbook/public/static/images/logo.png">
+    用户：{$vo.user}:</br></br>
+    <span style="font-weight: bold; font-size: 30px;color: #01FFFF">{$vo.word}</span></br>
+    <span style="text-align: right;">{$vo.datetime}</span>
+    <hr>
+  {/volist}
+  </div>
+   <div id="div2"">
+      {$word->render()}
+    </div>
+  <script type="text/javascript">
+      $("#div2 a").attr("data-ajax","false");
+  </script>
+<form action="worddo" data-ajax="false" method="post">
+    <div data-role="fieldcontain">
+    <!-- 文本域 -->
+      <label for="textarea">Textarea:</label>
+      <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+      <input data-inline="true" type="submit" name="submit" value="发送"  />
+    </div>
+</form>
+
+  </div>
+  <!-- 页脚 -->
+  <div data-role="footer" data-theme="b">
+    <h1>机电书店</h1>
+  </div>
+</div>
+</body>
+</html>

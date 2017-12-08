@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图书分类</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.css" >
+<script src="/mbook/public/static/JQM/jquery-1.11.1.min.js"></script>
+<script src="/mbook/public/static/JQM/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<style type="text/css">
+  .pagination{text-align:center;margin-top:20px;margin-bottom: 20px;}  
+.pagination li{margin:0px 10px; border:1px solid #e6e6e6;padding: 3px 8px;display: inline-block;}  
+.pagination .active{background-color: #dd1a20;color: #fff;}  
+.pagination .disabled{color:#aaa;}
+</style>
+<body>
+<div data-role="page">
+  <!-- 页眉 -->
+  <div data-role="header"> <a href="../index/index" data-ajax="false" data-role="button" data-icon="home">首页</a>
+    <h1>图书分类</h1>
+  </div>
+  <!-- 内容 -->
+  <div data-role="content">
+    <div data-role="collapsible-set">
+    
+    	{volist name="bb" id='b'} <!--读取大类-->
+			<div data-role="collapsible" data-collapsed="true">
+			  	<h1>{$b.b_name}</h1>
+ 				<ul data-role="listview"  data-inset="false">
+  					{foreach name='ss' item='s'} <!--读取小类-->
+    					{if condition="$b.b_id == $s.b_id"} <!--条件判断-->
+				    		<li><a data-ajax="false" href="booklist?sid={$s.s_id}"><span>{$s.s_name}</span></a></li>
+     					{/if}
+  					{/foreach}
+				</ul>
+			</div>
+		{/volist}
+    </div>
+    <div id="div2"">
+      {$bb->render()}
+    </div>
+  <script type="text/javascript">
+      $("#div2 a").attr("data-ajax","false");
+  </script>
+  </div>
+  <!-- 页脚 -->
+  <div data-role="footer">
+    <h1>机电书店</h1>
+  </div>
+</div>
+</body>
+</html>
